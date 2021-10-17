@@ -35,4 +35,11 @@ class StringCalculatorShould {
 		StringCalculator stringCalculator = new StringCalculator();
 		assertEquals(3, stringCalculator.add("//;\n1;2"));
 	}
+	
+	@Test
+	void whenNegativeNumberIsUsedThenRuntimeExceptionIsThrown() {
+		StringCalculator stringCalculator = new StringCalculator();
+		Exception exception = assertThrows(RuntimeException.class, () -> stringCalculator.add("1,-2,3,4,-5,6"));
+		assertTrue(exception.getMessage().contains("negatives not allowed"));
+	}
 }
