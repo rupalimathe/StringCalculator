@@ -54,5 +54,11 @@ class StringCalculatorShould {
 		StringCalculator stringCalculator = new StringCalculator();
 		assertEquals(6, stringCalculator.add("//[***]\n1***2***3"));
 	}
+	
+	@Test
+	void string_allow_multiple_delimiters_like_star_modules_as_int() {
+		StringCalculator stringCalculator = new StringCalculator();
+		assertEquals(6, stringCalculator.add("//[*][%]\n1*2%3"));
+	}
 
 }
