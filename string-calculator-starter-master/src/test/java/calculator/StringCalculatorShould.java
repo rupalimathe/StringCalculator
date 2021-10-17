@@ -42,4 +42,10 @@ class StringCalculatorShould {
 		Exception exception = assertThrows(RuntimeException.class, () -> stringCalculator.add("1,-2,3,4,-5,6"));
 		assertTrue(exception.getMessage().contains("negatives not allowed"));
 	}
+	
+	@Test
+	void string_numbers_bigger_than_1000_should_be_ignored_as_int() {
+		StringCalculator stringCalculator = new StringCalculator();
+		assertEquals(2, stringCalculator.add("2,1001"));
+	}
 }

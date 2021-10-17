@@ -29,7 +29,8 @@ class StringCalculator {
 					negativeNumbers.add(arr[i]);
 				}
 
-				if (!containNegativeNumber) 				// Perform the addition when all numbers are Positive
+				if (!containNegativeNumber &&
+					(Integer.parseInt(arr[i]) <= 1000)) 	// Perform the addition when all numbers are Positive and number is less than or equal to 1000
 					addition += Integer.parseInt(arr[i]); 	// Perform the addition for each number present in Array
 			}
 			
