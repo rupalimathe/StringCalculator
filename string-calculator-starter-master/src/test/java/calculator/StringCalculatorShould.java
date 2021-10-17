@@ -17,16 +17,22 @@ class StringCalculatorShould {
 		StringCalculator stringCalculator = new StringCalculator();
 		assertEquals(1, stringCalculator.add("1"));
 	}
-	
+
 	@Test
-    void string_with_more_than_one_number_should_return_addition_as_int() {
-        StringCalculator stringCalculator = new StringCalculator();
-        assertEquals(10, stringCalculator.add("1,2,3,4"));
-    }
-	
+	void string_with_more_than_one_number_should_return_addition_as_int() {
+		StringCalculator stringCalculator = new StringCalculator();
+		assertEquals(10, stringCalculator.add("1,2,3,4"));
+	}
+
 	@Test
-    void string_with_new_line_should_return_addition_as_int() {
-        StringCalculator stringCalculator = new StringCalculator();
-        assertEquals(6, stringCalculator.add("1\n2,3"));
-    }
+	void string_with_new_line_should_return_addition_as_int() {
+		StringCalculator stringCalculator = new StringCalculator();
+		assertEquals(6, stringCalculator.add("1\n2,3"));
+	}
+
+	@Test
+	void string_support_different_delimiters_return_addition_as_int() {
+		StringCalculator stringCalculator = new StringCalculator();
+		assertEquals(3, stringCalculator.add("//;\n1;2"));
+	}
 }
