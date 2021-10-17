@@ -17,7 +17,7 @@ class StringCalculator {
 			}
 
 			int addition = 0;
-			String[] arr = input.split(",|\n|;"); 			// Split the string using comma(,) or new line(\n) or semicolon(;) and store it in Array
+			String[] arr = input.split(",|\n|;|\\*\\*\\*");	// Split the string using comma(,) or new line(\n) or semicolon(;) or three stars(***) and store it in Array 
 
 			List<String> negativeNumbers = new ArrayList<>();
 

@@ -48,4 +48,11 @@ class StringCalculatorShould {
 		StringCalculator stringCalculator = new StringCalculator();
 		assertEquals(2, stringCalculator.add("2,1001"));
 	}
+	
+	@Test
+	void string_delimiters_can_be_of_any_length_as_int() {
+		StringCalculator stringCalculator = new StringCalculator();
+		assertEquals(6, stringCalculator.add("//[***]\n1***2***3"));
+	}
+
 }
